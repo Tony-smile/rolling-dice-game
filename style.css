@@ -1,14 +1,15 @@
 * {
-    
+
     padding: 0;
     margin: 0;
     max-width: 100%;
 }
 
-html,body {
+html,
+body {
     font-size: 62.5%;
     box-sizing: border-box;
-    max-width: 100%;
+
 }
 
 body {
@@ -39,7 +40,7 @@ main {
     flex: 50%;
     padding: 9rem;
     display: flex;
-    background-color:rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     flex-direction: column;
     align-items: center;
     transition: all 0.75s;
@@ -65,7 +66,7 @@ main {
 }
 
 .player--active {
-    background-color:rgba(255, 255, 255, 0.4)
+    background-color: rgba(255, 255, 255, 0.4)
 }
 
 .current-label {
@@ -160,14 +161,116 @@ main {
     background-color: #f3440fe0;
     padding: 2.5em 7em;
     border-radius: 10px;
+    text-align: center;
 }
 
 .hidden {
     display: none;
 }
 
-@media screen and(max-width:768) {
-    body{
+.won .player {
+    flex: 50%;
+    padding: 9rem;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.1);
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.75s;
+}
+
+@media screen and (max-width:768px) {
+    body {
+        display: flex;
         flex-direction: column;
     }
+    .current {
+        background-color: #f3440fe0;
+        padding: 2.5em 7em;
+        border-radius: 10px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+    }
+     .player{
+    
+     }
+
+    main {
+        position: relative;
+        width: 100%;
+        height: 80%;
+        /* background-color: rgba(255, 255, 255, 0.35); */
+        backdrop-filter: blur(200px);
+        filter: blur();
+        box-shadow: 0 3rem 5rem rgb(0 0 0 / 25%);
+        border-radius: 9px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10%;
+        
+    }
+.player.player--0{
+   padding-top: 0;
+   height:calc(40%);
+    } 
+    .player.player--1{
+        height:calc(60%);
+       padding-top: 0;
+   padding-bottom: 90;
+    }
+    .name {
+        position: relative;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        word-spacing: 2px;
+        font-weight: 300;
+        margin-top: 3em;
+    }
+
+    .dice {
+        top: 42%;
+        height: 7rem;
+    }
+
+   
+        .btn--new {
+            top: 42%;
+            right: 5%;
+            left: 80%;
+             transform: translateX(-3px); 
+            font-size: 1.2rem;
+            padding: 1.15em;
+            width: 5em;
+            text-align: center;
+        }
+
+
+    .btn--roll {
+        top: 52%;
+        right: 5%;
+       
+       
+    }
+
+    .btn--hold {
+        top: 42%;
+        left: 5%;
+        transform: translateX(3px);
+        font-size: 1.2rem;
+        padding: 0.5em 1.15em;
+    }
+
+    .player--active {
+        background-color: rgba(255, 255, 255, 0.4);
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+    }
+
 }

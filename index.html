@@ -10,19 +10,21 @@
 </head>
 
 <body>
+    <button>Rules</button>
     <main>
         <section class="player player--0 player--active">
             <h2 class="name" id="name--0">Player 1</h2>
             <p class="score" id="score--0">43</p>
-            <h4 class="won player--"></h4>
+            <h4 class="won player--0 hidden"></h4>
             <div class="current">
                 <p class="current-label">Points</p>
                 <p class="current-score" id="current--0">0</p>
             </div>
         </section>
         <section class="player player--1">
-            <h2 class="name" id="name--1">Computer</h2>
+            <h2 class="name" id="name--1">Player 2</h2>
             <p class="score" id="score--1">24</p>
+            <h4 class="won player--1 hidden"></h4>
             <div class="current">
                 <p class="current-label">Points</p>
                 <p class="current-score" id="current--1">0</p>
@@ -33,6 +35,22 @@
         <button class="btn btn--new">&#128260;New game</button>
         <button class="btn btn--roll"> &#127922;Roll dice</button>
         <button class="btn btn--hold">&#128377;Hold</button>
+        <div class="modal hidden">
+            <button class="close-modal">&times;</button>
+            <h1>Rules Of The Game</h1>
+            <ul>
+                <li class="list-items">First Player to Accumulate a Total Point of 100 Wins the Game</li>
+                <li class="list-items">Current Player Possess rolling Power as many times as possible provided he/she doesn't roll 1 dice</li>
+                <li class="list-items">When a Player rolls 1 dice they loses rolling Power to the opponent as well as unheld points</li>
+                <li class="list-items">When a player Holds accumulated Current point it's added to their total point and they lose their rolling Power to the opponent </li>
+                <li class="list-items">Good luck as you Play </li>
+            </ul>
+            <div class="details">
+                <input type="text" placeholder="username" name="username">
+                <button>Submit</button>
+            </div>
+         </div>
+         <div class="hidden overlay"></div>
     </main>
     <script src="script.js"></script>
 </body>

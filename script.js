@@ -11,6 +11,7 @@ let btnNew = document.querySelector('.btn--new');
 let btnRoll = document.querySelector('.btn--roll');
 let btnHold = document.querySelector('.btn--hold');
 let diceEle = document.querySelector('.dice');
+const rules = document.querySelector('.modal')
 //Starting conditions 
 let scores, currentScore, activePlayer, playing;
 const init = () => {
@@ -44,7 +45,10 @@ const switchPlayer = () => {
 
 }
 
-
+//On load function
+rules.addEventListener('onload', function(){
+    rules.classList.remove('hidden')
+})
 //Rolling Dice Functionality 
 btnRoll.addEventListener('click', function () {
     if (playing) {
