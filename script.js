@@ -46,7 +46,7 @@ const switchPlayer = () => {
 }
 
 //On load function
-rules.addEventListener('onload', function(){
+rules.addEventListener('load', function(){
     rules.classList.remove('hidden')
 })
 //Rolling Dice Functionality 
